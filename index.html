@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<style>
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+
+
+
+}
+:root {
+	--primary-color: black;
+	--text-color: black;
+}
+html {
+	font-size: 10px;
+}
+body {
+	font-family: Inter, Arial, Helvetica, sans-serif;
+	background-color: grey;
+	color: #000000;
+}
+
+
+img {
+	width: 150%;
+	margin-right: 500%;
+}
+a {
+	text-decoration: none;
+	color: #212A31;
+}
+.description {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+.item_preTitle {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	font-weight: 300;
+	
+}
+.item_title {
+	font-size: 1.6rem;
+	color: #212A31;
+	font-weight: 500;
+	margin: 0.8rem 0;
+}
+.item_subtitle {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+
+.container {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: grey;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+.profile {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
+.group-1,
+.group-2 {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+.group-3 {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+	grid-column: 1/-1;
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+}
+.group-3 > div {
+	flex: 1;
+}
+@media only screen and (max-width: 768px) {
+	.profile {
+		margin-bottom: 0;
+	}
+	.group-3 {
+		flex-direction: column;
+	}
+}
+
+
+.profile_container {
+	display: flex;
+	gap: 2rem;
+	
+}
+.profile_profileImg {
+	max-width: 250px;
+	
+}
+.profile_name_firstName {
+	color: #212A31;
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+	margin-left: 20%;
+    margin-top: 10%;
+}
+.profile_name_lastName {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+	margin-left: 20%;
+}
+.profile_title {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 20%;
+}
+.profile_description{
+	margin-left: 20%;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.profile_container {
+		flex-direction: column;
+	}
+}
+
+
+.skills_list {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+
+.ref_item {
+	margin-top: 2rem;
+}
+.ref_name {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+
+.edu_item {
+	margin-top: 2rem;
+}
+
+
+.certification_item {
+	margin-top: 2rem;
+}
+
+
+
+.awards_item {
+	margin-top: 2rem;
+}
+
+.interest_items {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.interest_item {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	color: var(--text-color);
+}
+
+
+
+.social_items {
+	margin-top: 2rem;
+}
+.social_item {
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: flex-start;
+	color: var(--text-color);
+}
+
+
+hr {
+	grid-column: 1/-1;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+	border: none;
+	border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+@media only screen and (max-width: 768px) {
+	hr {
+		margin: 0 auto;
+	}
+}
+
+  
+</style>
+
+<body>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="andal_1.jpg" alt="andal">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_firstName">Jhon Lester</span>
+            <span class="profile_name_lastName">Andal</span>
+          </h1>
+          <p class="profile_title">Objective</p>
+          <p class="description profile_description">
+            As a passionate and dedicated developer, my primary objective is to create efficient, reliable, 
+            and user-centric software solutions. With a keen problem-solving mindset,
+             I thrive on identifying complex challenges and developing innovative solutions to address them.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Expertise</h3>
+        <ul class="skills_list description">
+          <li>Web designing</li>
+          <li>Hardware Repairs</li>
+          <li>Python</li>
+          
+        </ul>
+      </div>
+      <div class="ref">
+        <h3 class="title">Skills</h3>
+        <div class="ref_item">
+          <h4 class="ref_name">Problem solving</h4>
+          <p class="description"> Identify and understand the problems that need to be solved and develop effective solutions through software..</p>
+        </div>
+        <div class="ref_item">
+          <h4 class="ref_name">Good Communication Skills</h4>
+          <p class="description"> Excellent written and verbal communication skills
+            Confident, articulate, and professional speaking abilities (and experience) </p>
+        </div>
+      </div>
+      
+
+      <div class="edu">
+        <h3 class="title">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle">2009-2015</p>
+          <h4 class="item_title">Elementary</h4>
+          <p class="item_subtitle">DALAHICAN ELEMENTARY S</p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2015-2019</p>
+          <h4 class="item_title"> High School</h4>
+          <p class="item_subtitle">LUCENA DALAHICAN NATIONNAL HIGHSCHOOL</p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2019-2021</p>
+          <h4 class="item_title">Senior High School</h4>
+          <p class="item_subtitle">LUCENA DALAHICAN NATIONNAL HIGHSCHOOL</p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2022-2026</p>
+          <h4 class="item_title">Collage</h4>
+          <p class="item_subtitle">Dalubhasaan Ng Lungsod Ng Lucena</p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <h3 class="title">certification</h3>
+        <div class="certification_item">
+          <p class="item_preTitle">2022</p>
+          <h4 class="item_title">COC3 NC2 </h4>
+          <p class="description">
+            I have a certifcation of cumputer system servicing COC3 NC2 in the Year 2022..
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+
+      <div class="interest">
+        <h3 class="title">Interest</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <i data-feather="music"></i>
+            <span>Watching anime</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="book"></i>
+            <span>Gaming</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="map"></i>
+            <span>Cycling</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            Jhon Lester Andal
+          </p>
+          <p class="description">
+            09510548231
+          </p>
+          <p class="description">
+            jhoncalipat8@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="#" target="_b" class="social_item">
+            <i data-feather="github"></i>
+            <span>jhoncalipay8gmail.com</span>
+          </a>
+          <a href="#" target="_blank" class="social_item">
+            <i data-feather="Facebook"></i>
+            <span>  Jhon Lester Andal</span>
+          </a>
+          <a href="#" target="_blank" class="social_item">
+            <i data-feather="Gmail"></i>
+            <span> jhonclipay8</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+</body>
+
+</html>
